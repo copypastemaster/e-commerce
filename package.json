@@ -10,8 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.7.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@firebase/firestore": "^4.0.0",
+    "@firebase/firestore-compat": "^0.3.13",
+    "@grpc/proto-loader": "^0.7.8",
+    "@radix-ui/react-form": "^0.0.3",
+    "firebase": "^10.0.0",
+    "framer-motion": "^10.12.18",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

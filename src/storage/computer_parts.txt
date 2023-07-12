@@ -1,0 +1,65 @@
+Peripherals: 
+
+monitor:
+
+brands = [acer, asus, dell, gigabyte, lg, samsung];
+sizes = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27];
+specs = ips, refresh rate,
+prices = low to high, high to low  
+rating: 1-5
+
+headset:
+
+brands = [razer, hyperx, sony, logitech, corsair, steelseries]
+prices = low to high, high to low
+rating: 1-5
+
+mouse: 
+
+brands = [logitech, steelseries, razer, hyperx, asus, corsair, rakk]
+prices = lowtto high, high to low
+rating: 1-5
+
+keyboard (mechanic only):
+
+brands = [msi, razer, asus, corsair, hyperx]
+prices: low to high, high to low
+rating: 1-5
+
+------------------------------------------------------------------------
+
+Hardware:
+
+GPU brands = [Asus, Gigabyte, Msi, Evga, Zotac, ASRock, XFX, PNY, Sapphire, PowerColor, Galax / KFA]
+
+AMD
+Nvidia
+Intel
+
+---------
+
+CPU brands 
+
+Intel
+AMD
+
+---------
+
+Motherboard:
+
+brands = [Gigabyte, ASRock, MSI, Asus, NZXT]
+
+---------
+
+SSD: 
+brands = [WD, Samsung, Seagate, Kingston]
+
+HDD: 
+brands = [WD, Samsung, Seagate, Toshiba]
+
+AirCoolers: 
+brands = [Thermalright, Deepcool, Noctua, Zalman, ]
+
+Computer fans: 
+brands = [Noctua, Scythe, Corsair, Thermaltake, NZXT, Cooler Master]
+

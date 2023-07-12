@@ -1,0 +1,13 @@
+An e-commerce website where you can 
+-buy computer parts 
+-pre-built systems (benchmark)
+-custom ones (benchmark)
+
+functionalities:
+search parts based on category
+recent searches
+
+pages:
+about - landing pages
+products
+checkout
