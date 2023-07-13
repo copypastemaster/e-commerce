@@ -9,3 +9,7 @@
 -Seasonic
 -Shuttle
 -Thermaltake
+
+list of category:
+-Peripherals (monitor, keyboard, mouse, headset)
+-hardware (gpu, cpu, motherboard, ssd, hdd, coolers, system fans)

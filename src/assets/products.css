@@ -1,0 +1,21 @@
+.DESKTOP h1:hover, .DESKTOP h3:hover  {
+    background-color: rgb(46, 44, 172);
+    transition: 200ms ease-in-out
+}
+
+.DESKTOP h1, .DESKTOP h3 {
+    padding: 1px;
+}
+
+.DESKTOP h3 {
+    font-size:medium;
+}
+
+.hamburger h3:hover, .hamburger h1:hover{
+    background-color:aliceblue;
+    transition: 200ms ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}

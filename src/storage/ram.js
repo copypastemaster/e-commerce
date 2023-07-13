@@ -16,3 +16,4 @@ export const ram = {
 let a = ram.ddr4.map((items) => {
     console.log(items)
 })
+
