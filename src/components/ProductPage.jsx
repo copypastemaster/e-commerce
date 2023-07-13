@@ -9,7 +9,7 @@ import {
     TabPanels, TabPanel, Image
 } from '@chakra-ui/react'
 import '../assets/products.css'
-import asus from '../assets/asusimages/rx7000.png'
+import { asus } from "../storage/asusStorage"
 
 import { useRef } from "react"
 
@@ -89,28 +89,40 @@ function Hamburger() {
             </div>
 
             <section className=''>   
-            <Tabs className='no-scrollbar overflow-scroll'>
-                <TabList>
-                    <Tab>All</Tab>
-                    <Tab>Asus</Tab>
-                    <Tab>Razer</Tab>
-                    <Tab>Corsair</Tab>
-                    <Tab>MSI</Tab>
-                    <Tab>ASRock</Tab>
-                    <Tab>Dell</Tab>
-                    <Tab>Phanteks</Tab>
-                    <Tab>Gigabyte</Tab>
-                </TabList>
+                <Tabs className='no-scrollbar overflow-scroll'>
+                    <TabList>
+                        <Tab>All</Tab>
+                        <Tab>Asus</Tab>
+                        <Tab>Razer</Tab>
+                        <Tab>Corsair</Tab>
+                        <Tab>MSI</Tab>
+                        <Tab>ASRock</Tab>
+                        <Tab>Dell</Tab>
+                        <Tab>Phanteks</Tab>
+                        <Tab>Gigabyte</Tab>
+                    </TabList>
 
-                <TabPanels>
-                    <TabPanel>Hi to all</TabPanel>
-                    <TabPanel><Image src={asus} 
-                                boxSize={{base: '150px', md:'200px', lg:'250px'}} />
-                    </TabPanel>
+                    <TabPanels>
+                        <TabPanel>Hi to all</TabPanel>
+                        <TabPanel>
+                           {/* {asus.map((item) => item.peripherals.map((each) => {
+                                return(
+                                    <>
+                                        {each.headset}
+                                       <img src={each.headsetImage} alt="" /> 
+                                    </>
+                                )
+                           }) )} */}
+                           <Products />
+                        </TabPanel>
 
-                </TabPanels>
-            </Tabs>    
-            </section>       
+                    </TabPanels>
+                </Tabs>
+
+                
+            </section>
+
+               
         </div>                    
         </>
         
