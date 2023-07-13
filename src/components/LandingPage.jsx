@@ -23,11 +23,11 @@ function Hero() {
             <section className='flex-col space-y-5 md:w-1/3 md:mx-auto md:flex-col md:space-y-52 text-center'>
                 <section className='hidden md:flex justify-end gap-10'>
                     <h1>About</h1>
-                    <Link to="/products">Products</Link>
+                    <Link to="/productpage">Products</Link>
                 </section>
                 
                 <h1 className='text-3xl leading-normal md:text-2xl lg:text-4xl'>Build your own, buy a pre-built, or piece by piece of hardware from our store.</h1>
-                <Link to='/products'>
+                <Link to='/productpage'>
                     <button className="bg-slate-700 rounded-lg text-white p-2 lg:relative lg:top-6">Check out our products!</button>
                 </Link>
             </section>

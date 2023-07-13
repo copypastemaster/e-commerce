@@ -1,6 +1,6 @@
 .DESKTOP h1:hover, .DESKTOP h3:hover  {
-    background-color: rgb(46, 44, 172);
-    transition: 200ms ease-in-out
+    color: rgb(168, 11, 11);
+    transition: 0ms ease-in-out
 }
 
 .DESKTOP h1, .DESKTOP h3 {
