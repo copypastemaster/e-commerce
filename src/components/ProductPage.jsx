@@ -31,7 +31,6 @@ function Hamburger() {
     const btnRef = useRef();
 
     const [test, setTest] = useState([]);
-    const [isTrue, setIsTrue] = useState(false)
 
     return (
         <>
@@ -50,8 +49,8 @@ function Hamburger() {
                 <DrawerContent>
                     <DrawerHeader className="text-center">Hardware</DrawerHeader>
                     <DrawerBody className="hamburger space-y-2">
-                        <h3>Graphics Card</h3>
-                        <h3>Central Processing Unit</h3>
+                        <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
+                        <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
                         <h3>Motherboard</h3>
                         <h3>SSD</h3>
                         <h3>HDD</h3>
@@ -88,15 +87,10 @@ function Hamburger() {
             </div>
 
             <section className=''>   
-                <Tabs className='no-scrollbar overflow-scroll outline-dashed'>
+                <Tabs size='sm' className='no-scrollbar overflow-scroll outline-dashed'>
                     <TabList>
                         <Tab>All</Tab>
-                        <Tab>
-                            <h1>Asus</h1>
-                            <TabList>
-                                
-                            </TabList>
-                        </Tab>
+                        <Tab>Asus</Tab>
                         <Tab>Razer</Tab>
                         <Tab>Corsair</Tab>
                         <Tab>MSI</Tab>
@@ -105,7 +99,7 @@ function Hamburger() {
                     </TabList>
 
                     <TabPanels>
-                        <TabPanel> <SideBar hide={isTrue} product={test}/> </TabPanel>
+                        <TabPanel> <SideBar product={test}/> </TabPanel>
                         <TabPanel>  </TabPanel>
                     </TabPanels>
                 </Tabs>

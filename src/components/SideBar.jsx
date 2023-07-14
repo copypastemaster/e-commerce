@@ -12,7 +12,7 @@ function SideBar({ product }) {
                 return (
                     <Card key={item.brand}>
                         <CardBody>
-                            <img src={item.img} className='w-40'/>
+                            <img src={item.img} className='w-24'/>
                         </CardBody>
                         <CardFooter>
                             <h1 className='text-center'>{item.name}</h1>
@@ -22,7 +22,6 @@ function SideBar({ product }) {
             })}
         </div>
     )  // swap the null with default values eg. if all, all items
-
 }
 
 export default SideBar
