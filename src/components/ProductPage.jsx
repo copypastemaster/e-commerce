@@ -10,8 +10,12 @@ import {
 } from '@chakra-ui/react'
 import '../assets/products.css'
 import { asus } from "../storage/asusStorage"
+import SideBar from "./SideBar"
+import { useRef, useState } from "react"
 
-import { useRef } from "react"
+
+import { graphics } from "../storage/graphics/graphics"
+import { cpu } from "../storage/cpu/cpu"
 
 function ProductPage() {
     return( 
@@ -26,13 +30,8 @@ function Hamburger() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
 
-    const display = (item) => {
-        return(
-            <>
-
-            </>
-        )
-    }
+    const [test, setTest] = useState([]);
+    const [isTrue, setIsTrue] = useState(false)
 
     return (
         <>
@@ -73,8 +72,8 @@ function Hamburger() {
         <div className='flex lg:justify-between lg:w-4/5'>   
             <div className='DESKTOP w-1/5 invisible lg:visible bg-slate-200 p-2 rounded-sm text-black h-100 space-y-9 lg:w-1/6'>
                     <h1 className='text-xl text-center my-3'>Hardware</h1>
-                    <h3>Graphics Card</h3>
-                    <h3>Central Processing Unit</h3>
+                    <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
+                    <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
                     <h3>Motherboard</h3>
                     <h3>SSD</h3>
                     <h3>HDD</h3>
@@ -89,33 +88,25 @@ function Hamburger() {
             </div>
 
             <section className=''>   
-                <Tabs className='no-scrollbar overflow-scroll'>
+                <Tabs className='no-scrollbar overflow-scroll outline-dashed'>
                     <TabList>
                         <Tab>All</Tab>
-                        <Tab>Asus</Tab>
+                        <Tab>
+                            <h1>Asus</h1>
+                            <TabList>
+                                
+                            </TabList>
+                        </Tab>
                         <Tab>Razer</Tab>
                         <Tab>Corsair</Tab>
                         <Tab>MSI</Tab>
                         <Tab>ASRock</Tab>
-                        <Tab>Dell</Tab>
-                        <Tab>Phanteks</Tab>
                         <Tab>Gigabyte</Tab>
                     </TabList>
 
                     <TabPanels>
-                        <TabPanel>Hi to all</TabPanel>
-                        <TabPanel>
-                           {/* {asus.map((item) => item.peripherals.map((each) => {
-                                return(
-                                    <>
-                                        {each.headset}
-                                       <img src={each.headsetImage} alt="" /> 
-                                    </>
-                                )
-                           }) )} */}
-                           <Products />
-                        </TabPanel>
-
+                        <TabPanel> <SideBar hide={isTrue} product={test}/> </TabPanel>
+                        <TabPanel>  </TabPanel>
                     </TabPanels>
                 </Tabs>
 

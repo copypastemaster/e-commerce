@@ -55,3 +55,9 @@ export const asus = [
            
     }
 ]
+
+const asusProd = [];
+
+asus.map((item) => item.hardware.map((items) => asusProd.push(items.coolers, items.coolersImg)));
+
+console.log(asusProd)

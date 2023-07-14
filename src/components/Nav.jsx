@@ -25,7 +25,7 @@ function Nav() {
                 <section className='flex gap-11'> 
                     <Menu>
                         <MenuButton as={Button} rightIcon={<ChevronDownIcon/>} size='sm' backgroundColor='whiteAlpha.100' className=''>
-                            Products
+                            Services
                         </MenuButton>
                         <MenuList>
                             <MenuItem>For your computer</MenuItem>

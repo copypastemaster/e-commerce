@@ -8,3 +8,6 @@ each item has card with:
 view - which directs to another page where users can see the full specs.
 title,
 add to cart button
+
+
+onClick of sidebar nav, render on tab whatever is the category. 
