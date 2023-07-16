@@ -42,6 +42,7 @@ function Hamburger() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
     const [test, setTest] = useState([]);
+    const [name, setName] = useState('');
     
     useEffect(() => {
         // [ [], [], [], [], [] ] - shape of (a)
@@ -105,7 +106,7 @@ function Hamburger() {
             </div>
 
             <section className='flex flex-col gap-5 w-100 max-w-3xl'>   
-                <h1>Products</h1>             
+                <h1>Products {name}</h1>             
                 <SideBar product={test}/>               
             </section>
 
