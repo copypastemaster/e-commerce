@@ -9,9 +9,8 @@ import {
     TabPanels, TabPanel, Image
 } from '@chakra-ui/react'
 import '../assets/products.css'
-import { asus } from "../storage/asusStorage"
 import SideBar from "./SideBar"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, Fragment } from "react"
 
 
 import { graphics } from "../storage/graphics/graphics"
@@ -26,6 +25,8 @@ import { mouse } from "../storage/mouse/mouse"
 import { headset } from "../storage/headset/headset"
 import { monitor } from "../storage/monitor/monitor"
 
+import { a} from "../storage/allProducts"
+
 function ProductPage() {
     return( 
         <>
@@ -36,16 +37,18 @@ function ProductPage() {
 }   
 
 function Hamburger() {
+    
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
-    const [test, setTest] = useState(['qwe']);
-    useEffect(() => {
-        console.log(test);
-    })
+    const [test, setTest] = useState([]);
     
-    // useEffect(() => {
-    //     return () => setTest([])
-    // }, [test])
+    useEffect(() => {
+        // [ [], [], [], [], [] ] - shape of (a)
+        let b = [];
+        a.map((item) => item.forEach((items) => b.push(items)))
+        setTest(b);
+    }, [])
 
     return (
         <>
@@ -101,25 +104,9 @@ function Hamburger() {
                     <h3 onClick={() => setTest(val => val = monitor)}>Monitor</h3>
             </div>
 
-            <section className=''>   
-                <Tabs size='sm' className='no-scrollbar overflow-scroll outline-dashed w-100 xl:max-w-5xl'>
-                    <TabList className='xl:gap-20'>
-                        <Tab>All</Tab>
-                        <Tab>Asus</Tab>
-                        <Tab>Razer</Tab>
-                        <Tab>Corsair</Tab>
-                        <Tab>MSI</Tab>
-                        <Tab>ASRock</Tab>
-                        <Tab>Gigabyte</Tab>
-                    </TabList>
-
-                    <TabPanels>
-                        <TabPanel> <SideBar product={test}/> </TabPanel>
-                        <TabPanel>  </TabPanel>
-                    </TabPanels>
-                </Tabs>
-
-                
+            <section className='flex flex-col gap-5 w-100 max-w-3xl'>   
+                <h1>Products</h1>             
+                <SideBar product={test}/>               
             </section>
 
                
