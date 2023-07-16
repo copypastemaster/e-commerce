@@ -11,11 +11,20 @@ import {
 import '../assets/products.css'
 import { asus } from "../storage/asusStorage"
 import SideBar from "./SideBar"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 
 import { graphics } from "../storage/graphics/graphics"
 import { cpu } from "../storage/cpu/cpu"
+import { motherboard } from "../storage/motherboard/motherboard"
+import { ssd } from "../storage/ssd/ssd"
+import { hdd } from "../storage/hdd/hdd"
+import { cooler } from "../storage/cooler/cooler"
+import { fans } from "../storage/fans/fans"
+import { keyboard } from "../storage/keyboards/keyboard"
+import { mouse } from "../storage/mouse/mouse"
+import { headset } from "../storage/headset/headset"
+import { monitor } from "../storage/monitor/monitor"
 
 function ProductPage() {
     return( 
@@ -29,8 +38,14 @@ function ProductPage() {
 function Hamburger() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
-
-    const [test, setTest] = useState([]);
+    const [test, setTest] = useState(['qwe']);
+    useEffect(() => {
+        console.log(test);
+    })
+    
+    // useEffect(() => {
+    //     return () => setTest([])
+    // }, [test])
 
     return (
         <>
@@ -49,7 +64,7 @@ function Hamburger() {
                 <DrawerContent>
                     <DrawerHeader className="text-center">Hardware</DrawerHeader>
                     <DrawerBody className="hamburger space-y-2">
-                        <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
+                        <h3 onClick={() => setTest(val => val = graphics)} >Graphics Card</h3>
                         <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
                         <h3>Motherboard</h3>
                         <h3>SSD</h3>
@@ -73,22 +88,22 @@ function Hamburger() {
                     <h1 className='text-xl text-center my-3'>Hardware</h1>
                     <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
                     <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
-                    <h3>Motherboard</h3>
-                    <h3>SSD</h3>
-                    <h3>HDD</h3>
-                    <h3>Coolers</h3>
-                    <h3>Fans</h3>
+                    <h3 onClick={() => setTest(val => val = motherboard)}>Motherboard</h3>
+                    <h3 onClick={() => setTest(val => val = ssd)}>SSD</h3>
+                    <h3 onClick={() => setTest(val => val = hdd)}>HDD</h3>
+                    <h3 onClick={() => setTest(val => val = cooler)}>Coolers</h3>
+                    <h3 onClick={() => setTest(val => val = fans)}>Fans</h3>
 
                     <h1 className='text-xl text-center my-3'>Peripherals</h1>
-                    <h3>Keyboard</h3>
-                    <h3>Mouse</h3>
-                    <h3>Headset</h3>
-                    <h3>Monitor</h3>
+                    <h3 onClick={() => setTest(val => val = keyboard)}>Keyboard</h3>
+                    <h3 onClick={() => setTest(val => val = mouse)}>Mouse</h3>
+                    <h3 onClick={() => setTest(val => val = headset)}>Headset</h3>
+                    <h3 onClick={() => setTest(val => val = monitor)}>Monitor</h3>
             </div>
 
             <section className=''>   
-                <Tabs size='sm' className='no-scrollbar overflow-scroll outline-dashed'>
-                    <TabList>
+                <Tabs size='sm' className='no-scrollbar overflow-scroll outline-dashed w-100 xl:max-w-5xl'>
+                    <TabList className='xl:gap-20'>
                         <Tab>All</Tab>
                         <Tab>Asus</Tab>
                         <Tab>Razer</Tab>

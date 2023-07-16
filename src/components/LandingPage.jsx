@@ -1,4 +1,3 @@
-import { HashLink  } from "react-router-hash-link"
 import heroPhoto from '../assets/hero.avif'
 import bestSeller from '../assets/bestseller.avif'
 import { Box, Image } from "@chakra-ui/react"

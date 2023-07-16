@@ -10,12 +10,12 @@ function SideBar({ product }) {
         <div className="flex flex-wrap justify-evenly gap-10">
             {product.map((item) => {
                 return (
-                    <Card key={item.brand}>
+                    <Card key={item.name}>
                         <CardBody>
                             <img src={item.img} className='w-24'/>
                         </CardBody>
                         <CardFooter>
-                            <h1 className='text-center'>{item.name}</h1>
+                            <h1 className='text-center w-20'>{item.name}</h1>
                         </CardFooter>
                     </Card>
                 )
