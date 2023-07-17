@@ -1,14 +1,24 @@
+import { Fragment } from "react";
 import Nav from "./Nav";
 import { useSelector } from "react-redux";
 
 function Cart() {
-    const product = useSelector((state) => state.product.value);
 
+    const cart = useSelector((state) => state.cart.value)
+
+    console.log(cart);
     return(
         <>
             <Nav />
-            <h1>{product.name}</h1>
-            <img src={product.img}/>
+            {cart.map((items) => {
+                return (
+                    <Fragment key={items.name}>
+                        <h1>{items.price}</h1>
+                        <h1>{items.name}</h1>
+                        <h1>{items.img}</h1>
+                     </Fragment>
+                )
+            })}
         </>
     )
 }

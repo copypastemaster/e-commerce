@@ -10,7 +10,7 @@ import {GrHomeRounded} from 'react-icons/gr'
 function Nav() {
     return(
         <div>
-            <div className='sticky flex justify-evenly 2xl:mr-9'>
+            <div className='w-96  mx-20 flex justify-evenly lg:w-100 lg:mx-0 2xl:mr-9'>
             <Link to="/" className='text-sm mt-1 pt-1 lg:relative xl:right-80'><GrHomeRounded size={19}/></Link>
 
 
@@ -24,7 +24,7 @@ function Nav() {
 
                 <section className='flex gap-11'>                     
                     <Link to="/productpage" className='text-sm mt-1 pt-1'>Shop</Link>
-                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart</Link>                   
+                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7'>0</span></Link>                   
                 </section>
             </div>
         </div>    

@@ -7,10 +7,12 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import productReducer from './features/ItemStore'
+import cartReducer from './features/cartStore'
 
 const store = configureStore({
   reducer: {
-    product: productReducer
+    product: productReducer,
+    cart: cartReducer
   },
 })
 

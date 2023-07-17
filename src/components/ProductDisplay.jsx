@@ -20,11 +20,15 @@ function ProductDisplay({ product }) {
                         </CardBody>
                         <CardFooter className='flex-col'>
                             <h1 className='text-xl w-100 xl:w-40'>{item.name}</h1>
-                            <Link to="/cart" className=''>
+                            <Link to="/view" className=''>
                                 <Button className='w-52' onClick={() => {
                                     dispatch(login({
                                         name: item.name,
-                                        img: item.img
+                                        img: item.img,
+                                        price: item.price,
+                                        description: item.description,
+                                        badge: item.badge,
+                                        prevPrice: item.prevPrice
                                     }
                                     ))
                                 }}>
