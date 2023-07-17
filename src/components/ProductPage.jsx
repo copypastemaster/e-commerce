@@ -1,5 +1,8 @@
 import Nav from "./Nav"
-import Products from "./Products"
+import ProductDisplay from "./ProductDisplay"
+import ProductHeader from "./ProductHeader"
+import { useEffect, useRef, useState, Fragment } from "react"
+
 import {HamburgerIcon} from '@chakra-ui/icons'
 import {
     Drawer, DrawerBody, DrawerFooter,
@@ -9,9 +12,6 @@ import {
     TabPanels, TabPanel, Image
 } from '@chakra-ui/react'
 import '../assets/products.css'
-import SideBar from "./SideBar"
-import { useEffect, useRef, useState, Fragment } from "react"
-
 
 import { graphics } from "../storage/graphics/graphics"
 import { cpu } from "../storage/cpu/cpu"
@@ -24,13 +24,13 @@ import { keyboard } from "../storage/keyboards/keyboard"
 import { mouse } from "../storage/mouse/mouse"
 import { headset } from "../storage/headset/headset"
 import { monitor } from "../storage/monitor/monitor"
-
-import { a} from "../storage/allProducts"
+import { a } from "../storage/allProducts"
 
 function ProductPage() {
     return( 
         <>
             <Nav/>
+            <ProductHeader />
             <Hamburger/>
         </>
     )
@@ -70,24 +70,24 @@ function Hamburger() {
                     <DrawerBody className="hamburger space-y-2">
                         <h3 onClick={() => setTest(val => val = graphics)} >Graphics Card</h3>
                         <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
-                        <h3>Motherboard</h3>
-                        <h3>SSD</h3>
-                        <h3>HDD</h3>
-                        <h3>Coolers</h3>
-                        <h3>Fans</h3>
+                        <h3 onClick={() => setTest(val => val = motherboard)}>Motherboard</h3>
+                        <h3 onClick={() => setTest(val => val = ssd)}>SSD</h3>
+                        <h3 onClick={() => setTest(val => val = hdd)}>HDD</h3>
+                        <h3 onClick={() => setTest(val => val = cooler)}>Coolers</h3>
+                        <h3 onClick={() => setTest(val => val = fans)}>Fans</h3>
                     </DrawerBody>
 
                     <DrawerHeader className="text-center">Peripherals</DrawerHeader>
                     <DrawerBody className='hamburger space-y-2'>
-                        <h3>Keyboard</h3>
-                        <h3>Mouse</h3>
-                        <h3>Headset</h3>
-                        <h3>Monitor</h3>
+                        <h3 onClick={() => setTest(val => val = keyboard)}>Keyboard</h3>
+                        <h3 onClick={() => setTest(val => val = mouse)}>Mouse</h3>
+                        <h3 onClick={() => setTest(val => val = headset)}>Headset</h3>
+                        <h3 onClick={() => setTest(val => val = monitor)}>Monitor</h3>
                     </DrawerBody>
                 </DrawerContent>        
             </Drawer>
 
-        <div className='flex lg:justify-between lg:w-4/5'>   
+        <div className='flex lg:justify-between lg:gap-44 lg:w-4/5'>   
             <div className='DESKTOP w-1/5 invisible lg:visible bg-slate-200 p-2 rounded-sm text-black h-100 space-y-9 lg:w-1/6'>
                     <h1 className='text-xl text-center my-3'>Hardware</h1>
                     <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
@@ -105,9 +105,9 @@ function Hamburger() {
                     <h3 onClick={() => setTest(val => val = monitor)}>Monitor</h3>
             </div>
 
-            <section className='flex flex-col gap-5 w-100 max-w-3xl'>   
-                <h1>Products {name}</h1>             
-                <SideBar product={test}/>               
+            <section className='flex flex-col gap-5 w-100 max-w-xl max-h-screen overflow-y-scroll no-scrollbar lg:max-w-5xl'>   
+                <h1 className='text-center text-xl'>Products {name}</h1>             
+                <ProductDisplay product={test}/>               
             </section>
 
                

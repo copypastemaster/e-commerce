@@ -12,8 +12,8 @@ export const graphics = [
         img: asusimg,
     },
     {
-        brand: 'razer',
-        name: 'Razer Core-X',
+        brand: 'zotac',
+        name: 'RTX 3090',
         img: razer,
     },
     {

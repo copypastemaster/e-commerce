@@ -19,23 +19,12 @@ function Nav() {
                         id="search" 
                         name="search"
                         placeholder="Search for product"
-                        className='bg-slate-100 rounded-xl p-2 w-100 outline-none mt-1 h-6'/>
+                        className='bg-slate-100 rounded-xl p-2 lg:w-96  outline-none mt-1 h-6'/>
                 </label>
 
-                <section className='flex gap-11'> 
-                    <Menu>
-                        <MenuButton as={Button} rightIcon={<ChevronDownIcon/>} size='sm' backgroundColor='whiteAlpha.100' className=''>
-                            Services
-                        </MenuButton>
-                        <MenuList>
-                            <MenuItem>For your computer</MenuItem>
-                            <MenuItem>Our pre-builts</MenuItem>
-                            <MenuItem>Build your own</MenuItem>
-
-                        </MenuList>
-                    </Menu>
+                <section className='flex gap-11'>                     
                     <Link to="/productpage" className='text-sm mt-1 pt-1'>Shop</Link>
-                    <h1 className='text-sm mt-1 pt-1'>Cart</h1>                   
+                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart</Link>                   
                 </section>
             </div>
         </div>    
