@@ -6,8 +6,18 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {GrHomeRounded} from 'react-icons/gr'
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 
 function Nav() {
+
+    const cart = useSelector((state) => state.cart.value);
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        setCount(cart.length)
+    }, [cart])
+
     return(
         <div>
             <div className='w-96  mx-20 flex justify-evenly lg:w-100 lg:mx-0 2xl:mr-9'>
@@ -24,7 +34,7 @@ function Nav() {
 
                 <section className='flex gap-11'>                     
                     <Link to="/productpage" className='text-sm mt-1 pt-1'>Shop</Link>
-                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7'>0</span></Link>                   
+                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7'>{count}</span></Link>                   
                 </section>
             </div>
         </div>    
