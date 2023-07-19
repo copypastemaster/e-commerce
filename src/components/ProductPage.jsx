@@ -86,9 +86,9 @@ function Hamburger() {
                 </DrawerContent>        
             </Drawer>
 
-        <div className='flex lg:justify-between lg:gap-44 lg:w-4/5'>   
-            <div className='DESKTOP w-1/5 invisible lg:visible bg-slate-200 p-2 rounded-sm text-black h-100 space-y-9 lg:w-1/6'>
-                    <h1 className='text-xl text-center my-3'>Hardware</h1>
+        <div className='flex lg:justify-between lg:gap-44 lg:w-5/6'>   
+            <div className='DESKTOP w-1/5 invisible lg:visible bg-slate-600 p-10 rounded-sm text-black h-100 space-y-5 lg:max-w-3/5'>
+                    <h1 className='text-2xl text-center my-3'>Hardware</h1>
                     <h3 onClick={() => setTest(val => val = graphics)}>Graphics Card</h3>
                     <h3 onClick={() => setTest(val => val = cpu)}>Central Processing Unit</h3>
                     <h3 onClick={() => setTest(val => val = motherboard)}>Motherboard</h3>
@@ -97,7 +97,7 @@ function Hamburger() {
                     <h3 onClick={() => setTest(val => val = cooler)}>Coolers</h3>
                     <h3 onClick={() => setTest(val => val = fans)}>Fans</h3>
 
-                    <h1 className='text-xl text-center my-3'>Peripherals</h1>
+                    <h1 className='text-2xl text-center my-3'>Peripherals</h1>
                     <h3 onClick={() => setTest(val => val = keyboard)}>Keyboard</h3>
                     <h3 onClick={() => setTest(val => val = mouse)}>Mouse</h3>
                     <h3 onClick={() => setTest(val => val = headset)}>Headset</h3>

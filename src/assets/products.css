@@ -1,4 +1,4 @@
-.DESKTOP h1:hover, .DESKTOP h3:hover  {
+.DESKTOP h3:hover  {
     color: rgb(168, 11, 11);
     transition: 0ms ease-in-out
 }
@@ -7,8 +7,14 @@
     padding: 1px;
 }
 
+.DESKTOP h1 {
+    background-color: rgb(224, 222, 222);
+    border-radius: 10px;
+}
+
 .DESKTOP h3 {
     font-size:medium;
+    color: rgb(243, 239, 239);
 }
 
 .hamburger h3:hover, .hamburger h1:hover{

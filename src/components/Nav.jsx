@@ -20,7 +20,7 @@ function Nav() {
 
     return(
         <div>
-            <div className='w-96  mx-20 flex justify-evenly sm:w-100 sm:mx-0'>
+            <div className='w-96  mx-20 flex justify-evenly sm:w-100 sm:mx-auto sm:gap-x-32 xl:gap-x-12 lg:gap-x-8  2xl:gap-x-80'>
             <Link to="/" className='text-sm mt-1 pt-1 lg:relative xl:right-80'><GrHomeRounded size={19}/></Link>
 
 
@@ -32,9 +32,9 @@ function Nav() {
                         className='bg-slate-100 rounded-xl p-2 lg:w-96  outline-none mt-1 h-6'/>
                 </label>
 
-                <section className='flex gap-11'>                     
+                <section className='flex gap-11 lg:relative lg:left-52'>                     
                     <Link to="/productpage" className='text-sm mt-1 pt-1'>Shop</Link>
-                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7'>{count}</span></Link>                   
+                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7 sm:left-7 sm:bottom-7'>{count}</span></Link>                   
                 </section>
             </div>
         </div>    

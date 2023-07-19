@@ -16,6 +16,7 @@ function Cart() {
                         <h1>{items.price}</h1>
                         <h1>{items.name}</h1>
                         <h1>{items.img}</h1>
+                        <h1>Quantity -- {items.quantity} ${items.totals}</h1>
                      </Fragment>
                 )
             })}
