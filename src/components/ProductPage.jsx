@@ -1,6 +1,7 @@
 import Nav from "./Nav"
 import ProductDisplay from "./ProductDisplay"
 import ProductHeader from "./ProductHeader"
+import PreBuilt from './PreBuilt'
 import { useEffect, useRef, useState, Fragment } from "react"
 
 import {HamburgerIcon} from '@chakra-ui/icons'
@@ -30,8 +31,8 @@ function ProductPage() {
     return( 
         <>
             <Nav/>
-            <ProductHeader />
-            <Hamburger/>
+            <ProductHeader firstContent={<Hamburger />}
+                           secondContent={<PreBuilt />}/>
         </>
     )
 }   

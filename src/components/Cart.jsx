@@ -19,7 +19,7 @@ function Cart() {
                     <div key={items.name} className='flex gap-5 md:w-1/3 md:mx-auto border md:justify-around p-10'>
                             <Image src={items.img} alt='computer hardware part' className='w-1/2  md:w-32 md:h-24 md:relative md:top-5'/>
                         <section className='flex-col'>
-                            <h1 className='text-2xl'>{items.name}</h1>
+                            <h1 className='text-2xl md:w-32'>{items.name}</h1>
                             <div className='flex-col'>
                                 <footer className='flex gap-3 my-5'>
                                         <p>{items.quantity} - </p>
@@ -29,7 +29,7 @@ function Cart() {
                                 <Button size={{base: 'sm', md: 'lg'}}
                                         onClick={() => toast({
                                             title: 'Order submitted',
-                                            description: 'Deliver is on your way!',
+                                            description: `Your item delivery is on the way!`,
                                             status: 'success',
                                             duration: '2000',
                                             isClosable: true,

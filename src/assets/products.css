@@ -8,8 +8,9 @@
 }
 
 .DESKTOP h1 {
-    background-color: rgb(224, 222, 222);
-    border-radius: 10px;
+    background-color: rgb(166, 195, 219);
+    border-radius: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .DESKTOP h3 {
