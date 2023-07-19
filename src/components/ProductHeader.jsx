@@ -5,7 +5,7 @@ import ProductPage from './ProductPage'
 function ProductHeader() {
     return(
         <>
-            <Tabs size={{base: 'sm', md: 'sm', lg:'lg'}}>
+            <Tabs size={{base: 'sm', md: 'sm', lg:'lg'}} className='my-10'>
                 <TabList>
                     <Tab>
                         <Link to="/productpage">For your computer</Link>

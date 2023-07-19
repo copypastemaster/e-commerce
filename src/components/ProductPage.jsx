@@ -42,7 +42,6 @@ function Hamburger() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = useRef();
     const [test, setTest] = useState([]);
-    const [name, setName] = useState('');
     
     useEffect(() => {
         // [ [], [], [], [], [] ] - shape of (a)
@@ -105,7 +104,7 @@ function Hamburger() {
                     <h3 onClick={() => setTest(val => val = monitor)}>Monitor</h3>
             </div>
 
-            <section className='flex flex-col gap-5 w-100 max-w-xl max-h-screen overflow-y-scroll no-scrollbar lg:max-w-5xl'>   
+            <section className='flex flex-col gap-5 w-100 max-w-xl max-h-screen overflow-y-scroll no-scrollbar lg:max-w-6xl'>   
                 <h1 className='text-center text-xl'>Products {name}</h1>             
                 <ProductDisplay product={test}/>               
             </section>
