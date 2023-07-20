@@ -5,7 +5,7 @@ import { prebuilt } from '../storage/prebuilt/prebuilt'
 export default function PreBuilt() {
   return (
     <div className='flex md:w-1/2 w-100 max-w-xl max-h-screen overflow-y-scroll no-scrollbar lg:max-w-6xl mx-auto'>
-        <ProductDisplay product={prebuilt}/>
+        <ProductDisplay product={prebuilt} disabled={true}/>
     </div>
   )
 }

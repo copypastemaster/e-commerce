@@ -9,13 +9,13 @@ import {
     DrawerCloseButton,
     useDisclosure,
     Button,
+    useToast
   } from '@chakra-ui/react'
 import { useSelector } from 'react-redux'
 
 export default function BuildDrawer() {
     const build = useSelector((state) => state.build.value);
-    console.log(build)
-
+    const toast = useToast();
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
 
@@ -27,7 +27,7 @@ export default function BuildDrawer() {
         a.push(parseInt(split));
     })
 
-    let total = a.reduce((acc, curr) => acc+curr)
+    let total = a.reduce((acc, curr) => acc+curr, 0)
     
   return (
     <>
@@ -59,9 +59,27 @@ export default function BuildDrawer() {
                     })}
                 </DrawerBody>
 
-                <DrawerFooter className='flex gap-52'> 
-                    <h1>Total</h1>
-                    <p>${total}</p>
+                <DrawerFooter className='flex flex-col'> 
+                    <section className='flex gap-52'>
+                        <h1>Total</h1>
+                        <p>${total}</p>
+                    </section>                    
+                    <Button size={{base: 'sm', md: 'lg'}}
+                                        onClick={() => a.length == 0 ? toast({
+                                            description: 'Place an order first!',
+                                            status: 'error',
+                                            duration: '2000',
+                                            isClosable: true
+                                        }) : toast({
+                                            title: 'Order submitted',
+                                            description: `Building your custom pc`,
+                                            status: 'success',
+                                            duration: '2000',
+                                            isClosable: true,
+                                        })}>
+                                    Place order
+                    </Button>      
+                   
                 </DrawerFooter>
             </DrawerContent>
         </Drawer>

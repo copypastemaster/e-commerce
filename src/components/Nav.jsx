@@ -35,7 +35,7 @@ function Nav() {
 
                 <section className='flex gap-11 lg:relative lg:left-52'>                     
                     <Link to="/productpage" className='text-sm mt-1 pt-1'>Shop</Link>
-                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative bottom-2 lg:left-7 lg:bottom-7 sm:left-7 sm:bottom-7'>{count}</span></Link>             
+                    <Link to="/cart" className='text-sm mt-1 pt-1'>Cart <span className='relative left-7 bottom-7 lg:left-7 lg:bottom-7 sm:left-7 sm:bottom-7'>{count}</span></Link>             
                     <BuildDrawer />      
                 </section>
             </div>

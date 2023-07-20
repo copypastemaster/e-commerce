@@ -108,7 +108,7 @@ function Hamburger() {
 
             <section className='flex flex-col gap-5 w-100 max-w-xl max-h-screen overflow-y-scroll no-scrollbar lg:max-w-6xl'>   
                 <h1 className='text-center text-xl'>Products {name}</h1>             
-                <ProductDisplay product={test}/>               
+                <ProductDisplay product={test} disabled={false}/>               
             </section>
 
                

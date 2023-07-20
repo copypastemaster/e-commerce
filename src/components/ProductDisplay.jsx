@@ -7,7 +7,7 @@ import { login } from '../features/ItemStore'
 import { pushBuild } from '../features/buildStore'
 import { useDispatch } from 'react-redux'
 
-function ProductDisplay({ product }) {
+function ProductDisplay({ product, disabled }) {
     const dispatch = useDispatch()
 
     return  (
@@ -42,7 +42,9 @@ function ProductDisplay({ product }) {
                                         img: item.img,
                                         price: item.price
                                     }))
-                                }}>
+                                }}
+                                    isDisabled={disabled}
+                                    >
                                     Add to build
                                 </Button>
                         </CardFooter>
