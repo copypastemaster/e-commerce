@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import ProductDisplay from './ProductDisplay'
 
 
-function ProductHeader({firstContent, secondContent}) {
+function ProductHeader({firstContent, secondContent, thirdContent}) {
     return(
         <>
             <Tabs size={{base: 'sm', md: 'sm', lg:'lg'}} className='my-10'>
@@ -17,6 +17,7 @@ function ProductHeader({firstContent, secondContent}) {
                 <TabPanels>
                     <TabPanel>{firstContent}</TabPanel>
                     <TabPanel>{secondContent}</TabPanel>
+                    <TabPanel>{thirdContent}</TabPanel>
                 </TabPanels>               
             </Tabs>
         </>

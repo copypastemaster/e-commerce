@@ -10,7 +10,7 @@ function Cart() {
     const cart = useSelector((state) => state.cart.value)
     const toast = useToast()
 
-    console.log(cart);
+    console.log(cart.length);
     return(
         <>
             <Nav />
