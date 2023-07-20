@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Prompt:wght@200&family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
+
 .DESKTOP h3:hover  {
     color: rgb(168, 11, 11);
     transition: 0ms ease-in-out
@@ -10,7 +16,6 @@
 .DESKTOP h1 {
     background-color: rgb(166, 195, 219);
     border-radius: 5px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .DESKTOP h3 {

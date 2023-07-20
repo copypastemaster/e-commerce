@@ -4,6 +4,7 @@ import {
 } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { login } from '../features/ItemStore'
+import { pushBuild } from '../features/buildStore'
 import { useDispatch } from 'react-redux'
 
 function ProductDisplay({ product }) {
@@ -13,7 +14,7 @@ function ProductDisplay({ product }) {
         <div className="flex flex-wrap gap-3 w-100">
             {product.map((item) => {
                 return (
-                    <Card key={item.name} className='relative left-10 w-100'>
+                    <Card key={item.img} className='relative left-10 w-100'>
                         <CardBody className='md:w-40'>
                             <img src={item.img} className='relative left-4 w-44 sm:w-100 h-100 max-h-32'/>
                                 
@@ -21,7 +22,7 @@ function ProductDisplay({ product }) {
                         <CardFooter className='flex-col gap-3'>
                             <h1 className='text-xl w-100 xl:w-40 font-medium'>{item.name}</h1>
                             <p className='text-sm'>{item.price}</p>
-                            <Link to="/view" className=''>
+                            <Link to="/view" className='flex flex-col gap-2'>
                                 <Button className='w-52' onClick={() => {
                                     dispatch(login({
                                         name: item.name,
@@ -34,7 +35,16 @@ function ProductDisplay({ product }) {
                                     ))
                                 }}>
                                 View</Button>
-                            </Link>
+                            </Link>                            
+                            <Button onClick={() => {
+                                    dispatch(pushBuild({
+                                        name: item.name,
+                                        img: item.img,
+                                        price: item.price
+                                    }))
+                                }}>
+                                    Add to build
+                                </Button>
                         </CardFooter>
                     </Card>
                 )

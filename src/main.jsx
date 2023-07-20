@@ -8,11 +8,13 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import productReducer from './features/ItemStore'
 import cartReducer from './features/cartStore'
+import buildReducer from './features/buildStore'
 
 const store = configureStore({
   reducer: {
     product: productReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    build: buildReducer
   },
 })
 

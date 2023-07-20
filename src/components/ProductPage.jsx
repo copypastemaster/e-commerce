@@ -26,7 +26,6 @@ import { mouse } from "../storage/mouse/mouse"
 import { headset } from "../storage/headset/headset"
 import { monitor } from "../storage/monitor/monitor"
 import { a } from "../storage/allProducts"
-import BuildYourOwn from "./BuildYourOwn"
 
 function ProductPage() {
     return( 
@@ -34,7 +33,7 @@ function ProductPage() {
             <Nav/>
             <ProductHeader firstContent={<Hamburger />}
                            secondContent={<PreBuilt />}
-                           thirdContent={<BuildYourOwn />}/>
+                           />
         </>
     )
 }   
