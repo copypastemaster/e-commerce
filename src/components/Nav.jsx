@@ -22,7 +22,7 @@ function Nav() {
     return(
         <div>
             <div className='w-96  mx-20 flex justify-evenly sm:w-100 sm:mx-auto sm:gap-x-32 xl:gap-x-12 lg:gap-x-8  2xl:gap-x-80'>
-            <Link to="/" className='text-sm mt-1 pt-1 lg:relative xl:right-80'><GrHomeRounded size={19}/></Link>
+            <Link to="/e-commerce" className='text-sm mt-1 pt-1 lg:relative xl:right-80'><GrHomeRounded size={19}/></Link>
 
 
                 <label for="search">

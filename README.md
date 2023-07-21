@@ -1,5 +1,7 @@
 # Computer parts e-commerce
 
+[Live Demo](https://copypastemaster.github.io/e-commerce/) :point_left:
+
 ## to run
 ```
 cd e-commerce
